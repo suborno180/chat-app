@@ -27,6 +27,7 @@ function Chat() {
           </div>
           {/* <ChatInbox /> */}
           <SearchBar/>
+          ok
         </div>
       </div>
     </main>
