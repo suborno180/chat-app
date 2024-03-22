@@ -1,18 +1,15 @@
-"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { CgMoreO } from "react-icons/cg";
 import { CiCircleMore } from "react-icons/ci";
 import { FaLink, FaRegEdit } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
-import ChatSidebar from "./components/Sidebar";
-import ChatInbox from "./components/Inbox";
+import ChatSidebar from "./Sidebar";
+import ChatInbox from "./Inbox";
 import { useSearchParams } from "next/navigation";
 
 export default function Home() {
   // Sample user data
-  const searchParams = useSearchParams();
-  const chatUserID = searchParams.get("id");
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen">
@@ -30,9 +27,9 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            {/* <ChatSidebar/> */}
+            <ChatSidebar />
           </div>
-            {/* <ChatInbox/> */}
+          <ChatInbox />
         </div>
       </div>
     </main>
