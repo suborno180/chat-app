@@ -2,7 +2,7 @@ import { FaRegEdit } from "react-icons/fa";
 import ChatSidebar from "./Sidebar";
 import ChatInbox from "./Inbox";
 
-export default function Home() {
+function Chat() {
   // Sample user data
 
   return (
@@ -29,3 +29,4 @@ export default function Home() {
     </main>
   );
 }
+export default Chat
