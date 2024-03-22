@@ -88,7 +88,7 @@ const ChatInbox = ({id}: {id: number}) => {
                 </div>
               ) : (
                 <>
-                  <div className="w-full min-h-[80vh] grid place-content-center">
+                  <div className="w-full min-h-[82vh] grid place-content-center">
                     <IoChatboxEllipsesOutline className="text-[200px]" />
                   </div>
                 </>
