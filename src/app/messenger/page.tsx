@@ -14,7 +14,7 @@ const Messenger = () => {
             {/* sidebar */}
             <div className="min-h-16 w-full flex items-center justify-between p-4">
               <div>
-                <Link href={'/chat'} className="text-2xl">Masseges</Link>
+                <Link href={'/messenger'} className="text-2xl">Masseges</Link>
               </div>
               <div className="tooltip tooltip-success" data-tip="Create Group">
                 <button>
@@ -22,7 +22,7 @@ const Messenger = () => {
                 </button>
               </div>
             </div>
-            <ChatSidebar />
+            <ChatSidebar id={0} />
           </div>
           <ChatInbox id={0}/>
         </div>
