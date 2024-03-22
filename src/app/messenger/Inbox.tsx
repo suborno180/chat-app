@@ -1,63 +1,41 @@
-"use client";
+import React from "react";
+import { FaLink, FaRegEdit } from "react-icons/fa";
+import Link from "next/link";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
-import React, { useState, useEffect } from "react";
 import { CgMoreO } from "react-icons/cg";
-import { FaLink } from "react-icons/fa";
-import { FiSend } from "react-icons/fi";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { FiSend } from "react-icons/fi";
 
-interface User {
-  id: number;
-  name: string;
-  message: string;
-  avatar: string;
-  online: boolean;
-  time: string;
-}
-
-const ChatInbox = () => {
-  const [ChatUserData, setChatUserData] = useState<User | null>(null);
-  const searchParams = useSearchParams();
-  const chatUserID = searchParams.get("id");
-
-  useEffect(() => {
+const ChatInbox = ({id}: {id: number}) => {
     const users = [
-      {
-        id: 1,
-        name: "Odithi Hosien",
-        message: "Lorem ipsum dolor sit amet consectetur dsf dsf sdf ",
-        avatar: "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
-        online: true,
-        time: "2m",
-      },
-      {
-        id: 2,
-        name: "Zara Khatun",
-        message: "Hello there!",
-        avatar: "/pexels-photo-415829.webp",
-        online: false,
-        time: "5m",
-      },
-      {
-        id: 3,
-        name: "Jane Smith",
-        message: "How are you doing?",
-        avatar: "/1-intro-photo-final.jpg",
-        online: true,
-        time: "10m",
-      },
-      // Add more users as needed
-    ];
-
-    if (chatUserID !== null) {
-      const userData = users.find((user) => user.id === parseInt(chatUserID));
-      if (userData) {
-        setChatUserData(userData);
-      }
-    }
-  }, [chatUserID]);
-
+        {
+          id: 1,
+          name: "Odithi Hosien",
+          message: "Lorem ipsum dolor sit amet consectetur dsf dsf sdf ",
+          avatar: "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
+          online: true,
+          time: "2m",
+        },
+        {
+          id: 2,
+          name: "Zara Khatun",
+          message: "Hello there!",
+          avatar: "/pexels-photo-415829.webp",
+          online: false,
+          time: "5m",
+        },
+        {
+          id: 3,
+          name: "Jane Smith",
+          message: "How are you doing?",
+          avatar: "/1-intro-photo-final.jpg",
+          online: true,
+          time: "10m",
+        },
+        // Add more users as needed
+      ];
+      const Data = users.filter((e)=> e.id === id)
+      const ChatUserData = Data[0]
   return (
     <>
       <div className="w-full h-full">

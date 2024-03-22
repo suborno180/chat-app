@@ -1,13 +1,20 @@
-import { FaRegEdit } from "react-icons/fa";
-import ChatSidebar from "./Sidebar";
+import React from "react";
+import { FaLink, FaRegEdit } from "react-icons/fa";
 import Link from "next/link";
-import ChatInbox from "./Inbox";
+import Image from "next/image";
+import { CgMoreO } from "react-icons/cg";
+import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { FiSend } from "react-icons/fi";
+import ChatSidebar from "../Sidebar";
+import ChatInbox from "../Inbox";
 
-const Messenger = () => {
-  // Sample user data
+const page = ({ params }: { params: { id: string } }) => {
+
+    const id = Number(params.id)
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen">
+    <>
+      <main className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-[90%] mx-auto h-full  bg-white/30 backdrop-blur-lg rounded-lg">
         <div className="w-full h-full flex">
           <div className="hidden  rounded-lg rounded-r-none lg:flex flex-col min-w-[350px] max-w-[350px] min-h-[70vh] bg-white/20">
@@ -22,12 +29,14 @@ const Messenger = () => {
                 </button>
               </div>
             </div>
-            <ChatSidebar />
+            <ChatSidebar id={id} />
           </div>
-          <ChatInbox id={0}/>
+          <ChatInbox id={id}/>
         </div>
       </div>
     </main>
+    </>
   );
-}
-export default Messenger
+};
+
+export default page;

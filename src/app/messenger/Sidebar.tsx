@@ -1,12 +1,9 @@
-"use client"
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import React from "react";
 
-const ChatSidebar = () => {
-const searchParams = useSearchParams()
-const chatUserID = searchParams.get("id");
+const ChatSidebar = ({id}: {id: number}) => {
+const chatUserID = id;
   const users = [
     {
       id: 1,
@@ -69,7 +66,7 @@ const chatUserID = searchParams.get("id");
                 </p>
               </div>
               <Link
-                href={`/messenger?id=${user.id}`}
+                href={`/messenger/${user.id}`}
                 className="absolute top-0 left-0 w-full h-full"
               ></Link>
             </li>
