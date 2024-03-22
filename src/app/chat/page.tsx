@@ -27,7 +27,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <ChatSidebar/>
+            {/* <ChatSidebar/> */}
           </div>
             <ChatInbox/>
         </div>
