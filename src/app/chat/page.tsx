@@ -29,7 +29,7 @@ export default function Home() {
             </div>
             {/* <ChatSidebar/> */}
           </div>
-            <ChatInbox/>
+            {/* <ChatInbox/> */}
         </div>
       </div>
     </main>
