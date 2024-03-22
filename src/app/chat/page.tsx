@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CgMoreO } from "react-icons/cg";
+import { CiCircleMore } from "react-icons/ci";
 import { FaLink, FaRegEdit } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 
@@ -95,20 +97,23 @@ export default function Home() {
           </div>
           <div className="w-full h-full">
             <div className="min-h-16 w-full bg-white/20 flex items-center justify-between px-4">
-                <div>
-                <div
-                      className={`avatar online`}
-                    >
-                      <div className="w-12 rounded-full">
-                        <Image
-                          width={40}
-                          height={40}
-                          src={"/pexels-photo-415829.webp"}
-                          alt="User avatar"
-                        />
-                      </div>
-                    </div>
+              <div className="flex flex-col items-center">
+                <div className={`avatar online`}>
+                  <div className="w-12 rounded-full">
+                    <Image
+                      width={40}
+                      height={40}
+                      src={"/pexels-photo-415829.webp"}
+                      alt="User avatar"
+                    />
+                  </div>
                 </div>
+              </div>
+              <div>
+                <button>
+                  <CgMoreO size={20} />
+                </button>
+              </div>
             </div>
             <div className="w-full p-10">
               <div className="w-full min-h-[75vh] relative">
