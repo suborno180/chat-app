@@ -69,7 +69,7 @@ const chatUserID = searchParams.get("id");
                 </p>
               </div>
               <Link
-                href={`/chat?id=${user.id}`}
+                href={`/messenger?id=${user.id}`}
                 className="absolute top-0 left-0 w-full h-full"
               ></Link>
             </li>

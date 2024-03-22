@@ -6,7 +6,7 @@ import { FiSend } from "react-icons/fi";
 export default function Home() {
   return (
     <>
-      <Link href="/chat">Chat app</Link>
+      <Link href="/messenger">Chat app</Link>
     </>
   );
 }

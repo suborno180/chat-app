@@ -2,9 +2,8 @@ import { FaRegEdit } from "react-icons/fa";
 import ChatSidebar from "./Sidebar";
 import ChatInbox from "./Inbox";
 import Link from "next/link";
-import SearchBar from "./search-bar";
 
-function Chat() {
+const Messenger = () => {
   // Sample user data
 
   return (
@@ -23,14 +22,12 @@ function Chat() {
                 </button>
               </div>
             </div>
-            {/* <ChatSidebar /> */}
+            <ChatSidebar />
           </div>
-          {/* <ChatInbox /> */}
-          <SearchBar/>
-          ok
+          <ChatInbox />
         </div>
       </div>
     </main>
   );
 }
-export default Chat
+export default Messenger
