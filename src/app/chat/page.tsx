@@ -1,6 +1,7 @@
 import { FaRegEdit } from "react-icons/fa";
 import ChatSidebar from "./Sidebar";
 import ChatInbox from "./Inbox";
+import Link from "next/link";
 
 function Chat() {
   // Sample user data
@@ -13,7 +14,7 @@ function Chat() {
             {/* sidebar */}
             <div className="min-h-16 w-full flex items-center justify-between p-4">
               <div>
-                <h1 className="text-2xl">Masseges</h1>
+                <Link href={'/chat'} className="text-2xl">Masseges</Link>
               </div>
               <div className="tooltip tooltip-success" data-tip="Create Group">
                 <button>
