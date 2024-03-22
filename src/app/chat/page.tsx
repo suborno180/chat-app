@@ -2,6 +2,7 @@ import { FaRegEdit } from "react-icons/fa";
 import ChatSidebar from "./Sidebar";
 import ChatInbox from "./Inbox";
 import Link from "next/link";
+import SearchBar from "./search-bar";
 
 function Chat() {
   // Sample user data
@@ -25,6 +26,7 @@ function Chat() {
             {/* <ChatSidebar /> */}
           </div>
           {/* <ChatInbox /> */}
+          <SearchBar/>
         </div>
       </div>
     </main>
