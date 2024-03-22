@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[url(/pexels-pille-kirsi-1116955.jpg)] bg-cover bg-center bg-fixed`}>{children}</body>
+      <body className={`${inter.className} min-h-screen bg-[url(/pexels-pille-kirsi-1116955.jpg)] bg-cover bg-center bg-fixed`}>{children}</body>
     </html>
   );
 }
