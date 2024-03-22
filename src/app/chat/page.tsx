@@ -22,9 +22,9 @@ function Chat() {
                 </button>
               </div>
             </div>
-            <ChatSidebar />
+            {/* <ChatSidebar /> */}
           </div>
-          <ChatInbox />
+          {/* <ChatInbox /> */}
         </div>
       </div>
     </main>
