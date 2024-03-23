@@ -24,7 +24,7 @@ const Messenger = () => {
             </div>
             <ChatSidebar id={0} />
           </div>
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex lg:w-full">
           <ChatInbox id={0}/>
           </div>
         </div>
