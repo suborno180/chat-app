@@ -5,6 +5,7 @@ import Image from "next/image";
 import { CgMoreO } from "react-icons/cg";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { FiSend } from "react-icons/fi";
+import { IoMdArrowBack } from "react-icons/io";
 
 const ChatInbox = ({id}: {id: number}) => {
     const users = [
@@ -42,6 +43,9 @@ const ChatInbox = ({id}: {id: number}) => {
         {ChatUserData && (
           <div className="min-h-16 w-full bg-white/20 flex items-center justify-between px-4">
             <div className="flex items-center gap-4">
+              <Link href={'/messenger'}>
+              <IoMdArrowBack size={20} />
+              </Link>
               <div
                 className={`avatar ${
                   ChatUserData.online ? "online" : "offline"
@@ -70,7 +74,7 @@ const ChatInbox = ({id}: {id: number}) => {
             </div>
           </div>
         )}
-        <div className="w-full p-10">
+        <div className="w-full p-4 lg:p-10">
           <div className="w-full min-h-[75vh] relative">
             <div className="w-full min-h-[65vh]">
               {ChatUserData ? (

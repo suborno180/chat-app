@@ -10,7 +10,7 @@ const Messenger = () => {
     <main className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-[90%] mx-auto h-full  bg-white/30 backdrop-blur-lg rounded-lg">
         <div className="w-full h-full flex">
-          <div className="hidden  rounded-lg rounded-r-none lg:flex flex-col min-w-[350px] max-w-[350px] min-h-[70vh] bg-white/20">
+          <div className="rounded-lg rounded-r-none lg:flex flex-col w-full lg:min-w-[350px] lg:max-w-[350px] min-h-[90vh] bg-white/20">
             {/* sidebar */}
             <div className="min-h-16 w-full flex items-center justify-between p-4">
               <div>
@@ -24,7 +24,9 @@ const Messenger = () => {
             </div>
             <ChatSidebar id={0} />
           </div>
+          <div className="hidden lg:flex">
           <ChatInbox id={0}/>
+          </div>
         </div>
       </div>
     </main>
