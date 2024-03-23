@@ -74,9 +74,9 @@ const ChatInbox = ({id}: {id: number}) => {
             </div>
           </div>
         )}
-        <div className="w-full p-4 lg:p-10">
-          <div className="w-full min-h-[75vh] relative">
-            <div className="w-full min-h-[65vh]">
+        <div className="w-full p-4 lg:p-5">
+          <div className="w-full min-h-[88vh] lg:min-h-[88vh] relative">
+            <div className="w-full min-h-[80vh] lg:min-h-[70vh]">
               {ChatUserData ? (
                 <div>
                   <div className="chat chat-start">
